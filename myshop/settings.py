@@ -131,3 +131,6 @@ MEDIA_ROOT = BASE_DIR / 'media'     # local path which files live
 
 
 CART_SESSION_ID = 'cart'
+
+#write emails to the console.( instead of setup email settings)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
