@@ -26,7 +26,7 @@ def payment_process(request):
             'client_reference_id': order.id,
             'success_url': success_url,
             'cancel_url': cancel_url,
-            'line_items': []
+            'line_items': [],
         }
 
         # add order items to the Stripe checkout session
@@ -46,8 +46,10 @@ def payment_process(request):
 
         # create Stripe checkout session
         session = stripe.checkout.Session.create(**session_data)
+
         # redirect to Stripe payment form
         return redirect(session.url, code=303)
+
     else:
         return render(request, 'payment/process.html', locals())
 
