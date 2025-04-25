@@ -27,6 +27,7 @@ def stripe_webhook(request):
 
     if event.type == 'checkout.session.completed':
         session = event.data.object
+        print('session.client_reference_id ----------------: ', session.client_reference_id)
         if (
             session.mode == 'payment'
             and session.payment_status == 'paid'
