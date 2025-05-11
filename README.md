@@ -32,6 +32,6 @@ It demonstrates my experience in backend development, database handling, templat
 ---
 
 ## Clone the repo
-
+```bash
 git clone git@github.com:motiefard/online_shop.git
 cd online_shop
